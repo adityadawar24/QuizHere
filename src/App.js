@@ -1,20 +1,33 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import LoginPage from "./components/LoginPage";
-import HomePage from "./components/HomePage";
-import QuizPage from "./components/QuizPage";
-import ResultPage from "./components/ResultPage";
+import Header from "./components/Header";
+import NavBar from "./components/NavBar";
+import SaleComponent from "./components/SaleComponent";
+import { Route, Routes } from "react-router-dom";
+import Women from "./pages/Women";
+import Home from "./components/Home";
+import Men from "./pages/Men";
+import Kids from "./pages/Kids";
+import ShoeBags from "./pages/ShoeBags";
+import GenZ from "./pages/GenZ";
+import HomeLiving from "./pages/HomeLiving";
+
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/quiz" element={<QuizPage />} />
-        <Route path="/result" element={<ResultPage />} />
-      </Routes>
-    </Router>
+    <>
+        <Header/>
+        <NavBar/>
+        <SaleComponent/>
+        <Routes>
+          <Route path="/women" element={<Women/>}/>
+          <Route path="/men" element={<Men/>}/>
+          <Route path="/kids" element={<Kids/>}/>
+          <Route path="/genz" element={<GenZ/>}/>
+          <Route path="/shoes&bags" element={<ShoeBags/>}/>
+          <Route path="/home&living" element={<HomeLiving/>}/>
+          <Route path="/" element={<Home/>} />
+        </Routes>
+    </>
   );
 };
 
