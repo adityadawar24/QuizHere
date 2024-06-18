@@ -7,9 +7,6 @@ const NavBar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [showDropdown1, setShowDropdown1] = useState(false);
   const [showDropdown2, setShowDropdown2] = useState(false);
-  const [showDropdown3, setShowDropdown3] = useState(false);
-  const [showDropdown4, setShowDropdown4] = useState(false);
-  const [showDropdown5, setShowDropdown5] = useState(false);
   return(
     <div style={{ borderBottom: "1px solid #eaeaea" }}>
       <div style={{ display: "flex", height: "70px", alignItems: "center", padding: "0 116px", position: "relative" }}>
@@ -285,200 +282,8 @@ const NavBar = () => {
               </div>
             )}
           </div>
-          <div
-            className="relative"
-            onMouseEnter={() => setShowDropdown3(true)}
-            onMouseLeave={() => setShowDropdown3(false)}
-          >
-            <Link
-              to="/shoes&bags"
-              className="text-black hover:text-orange-500"
-              style={{ fontSize: "86%" }}
-            >
-              Shoes & Bags
-            </Link>
-            {showDropdown3 && (
-              <div
-                className="absolute top-[2.45rem] left-[-342px] bg-white shadow-lg p-4 z-50 w-[83vw]"
-                style={{ display: "grid", gridTemplateColumns: "repeat(6, minmax(0, 1fr))", gap: "-8px", marginTop: "8px", fontSize: "80%" }}
-              >
-                <div>
-                  <h4 className="font-bold">Ethnic & Fusion Wear</h4>
-                  <ul>
-                    <li>Kurtas & Kurtis</li>
-                    <li>Kurta Sets</li>
-                    <li>Ethnic Dresses</li>
-                    <li>Tops & Tunics</li>
-                    <li>Leggings & Churidars</li>
-                    <li>Pants & Palazzos</li>
-                    <li>Skirts</li>
-                    <li>Dupattas & Stoles</li>
-                    <li>Saree</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-bold">SportsWear</h4>
-                  <ul>
-                    <li>Tops & Tees</li>
-                    <li>Sports Bra</li>
-                    <li>Leggings</li>
-                    <li>Joggers & Tracks</li>
-                    <li>Sweatshirts & Jackets</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-bold">Top Brands</h4>
-                  <ul>
-                    <li>Melange</li>
-                    <li>Ginger</li>
-                    <li>Code</li>
-                    <li>Fame Forever</li>
-                    <li>Kappa</li>
-                    <li>Biba</li>
-                    <li>Aurelia</li>
-                    <li>AND</li>
-                    <li>Allen Solly</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-bold">Plus size</h4>
-                  <ul>
-                    <li>Beauty</li>
-                    <li>Footwear/Bags</li>
-                    <li>Watches</li>
-                    <li>Jewellery</li>
-                    <li>Fragrances</li>
-                  </ul>
-                </div>
-              </div>
-            )}
-          </div>
-          <div
-            className="relative"
-            onMouseEnter={() => setShowDropdown4(true)}
-            onMouseLeave={() => setShowDropdown4(false)}
-          >
-            <Link
-              to="/genz"
-              className="text-black hover:text-orange-500"
-              style={{ fontSize: "86%" }}
-            >
-              Gen Z
-            </Link>
-            {showDropdown4 && (
-              <div
-                className="absolute top-[2.45rem] left-[-466px] bg-white shadow-lg p-4 z-50 w-[83vw]"
-                style={{ display: "grid", gridTemplateColumns: "repeat(6, minmax(0, 1fr))", gap: "-8px", marginTop: "8px", fontSize: "80%" }}
-              >
-                <div>
-                  <h4 className="font-bold">Ethnic & Fusion Wear</h4>
-                  <ul>
-                    <li>Kurtas & Kurtis</li>
-                    <li>Kurta Sets</li>
-                    <li>Ethnic Dresses</li>
-                    <li>Tops & Tunics</li>
-                    <li>Leggings & Churidars</li>
-                    <li>Pants & Palazzos</li>
-                    <li>Skirts</li>
-                    <li>Dupattas & Stoles</li>
-                    <li>Saree</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-bold">Western Wear</h4>
-                  <ul>
-                    <li>Tops & Tees</li>
-                    <li>Dresses & Jumpsuits</li>
-                    <li>Jeans & Jeggings</li>
-                    <li>Shorts & Skirts</li>
-                    <li>Trousers</li>
-                    <li>Jackets & Shrugs</li>
-                  </ul>
-                </div>
-              </div>
-            )}
-          </div>
-          <div
-            className="relative"
-            onMouseEnter={() => setShowDropdown5(true)}
-            onMouseLeave={() => setShowDropdown5(false)}
-          >
-            <Link
-              to="/home&living"
-              className="text-black hover:text-orange-500"
-              style={{ fontSize: "86%" }}
-            >
-              Home & Living
-            </Link>
-            {showDropdown5 && (
-              <div
-                className="absolute top-[2.45rem] left-[-543px] bg-white shadow-lg p-4 z-50 w-[83vw]"
-                style={{ display: "grid", gridTemplateColumns: "repeat(6, minmax(0, 1fr))", gap: "-8px", marginTop: "8px", fontSize: "80%" }}
-              >
-                <div>
-                  <h4 className="font-bold">Ethnic & Fusion Wear</h4>
-                  <ul>
-                    <li>Kurtas & Kurtis</li>
-                    <li>Kurta Sets</li>
-                    <li>Ethnic Dresses</li>
-                    <li>Tops & Tunics</li>
-                    <li>Leggings & Churidars</li>
-                    <li>Pants & Palazzos</li>
-                    <li>Skirts</li>
-                    <li>Dupattas & Stoles</li>
-                    <li>Saree</li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h4 className="font-bold">Lingerie/Sleepwear</h4>
-                  <ul>
-                    <li>Bras</li>
-                    <li>Briefs/Panties</li>
-                    <li>Cami & Slips</li>
-                    <li>Shapewear</li>
-                    <li>Nightwear</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-bold">SportsWear</h4>
-                  <ul>
-                    <li>Tops & Tees</li>
-                    <li>Sports Bra</li>
-                    <li>Leggings</li>
-                    <li>Joggers & Tracks</li>
-                    <li>Sweatshirts & Jackets</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-bold">Top Brands</h4>
-                  <ul>
-                    <li>Melange</li>
-                    <li>Ginger</li>
-                    <li>Code</li>
-                    <li>Fame Forever</li>
-                    <li>Kappa</li>
-                    <li>Biba</li>
-                    <li>Aurelia</li>
-                    <li>AND</li>
-                    <li>Allen Solly</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-bold">Plus size</h4>
-                  <ul>
-                    <li>Beauty</li>
-                    <li>Footwear/Bags</li>
-                    <li>Watches</li>
-                    <li>Jewellery</li>
-                    <li>Fragrances</li>
-                  </ul>
-                </div>
-              </div>
-            )}
-          </div>
           
-          <div style={{ position: "absolute", left: "52.5%", top: "39%", color: "#aaa" }}>
+          <div style={{ position: "absolute", left: "35%", top: "39%", color: "#aaa" }}>
             <FiSearch />
           </div>
           <input
@@ -495,17 +300,8 @@ const NavBar = () => {
               marginTop:"-7px",
             }}
           />
-          <Link to="/"  className="text-black hover:text-orange-500 " style={{ cursor: "pointer", fontSize:"86%" }}>More</Link>
-          <div
-            style={{
-              backgroundColor: "grey",
-              height: "20px",
-              width: "1.5px",
-              marginLeft: "-7px",
-              marginTop: "3px",
-            }}
-          ></div>
-          <Link to="/" className="text-black hover:text-orange-500 " style={{ cursor: "pointer", fontSize:"86%" }}>Sign Up / Sign In</Link>
+         
+          <Link to="/signup" className="text-black hover:text-orange-500 " style={{ cursor: "pointer", fontSize:"86%" }}>Sign Up / Sign In</Link>
           <FiHeart style={{ cursor: "pointer" }} />
           <FiShoppingBag style={{ cursor: "pointer" }} />
         </div>
