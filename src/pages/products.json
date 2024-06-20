@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "name": "The Catalyzer",
+      "price": 16.00,
+      "size": ["M", "L", "XL"],
+      "image": "https://lmsin.net/cdn-cgi/image/h=831,w=615,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000011196949-Blue-Navy-1000011196949_01-2100.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Shooting Stars",
+      "price": 21.15,
+      "size": ["S", "M"],
+      "image": "https://lmsin.net/cdn-cgi/image/h=831,w=615,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000011196949-Blue-Navy-1000011196949_01-2100.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Neptune",
+      "price": 12.00,
+      "size": ["M", "L"],
+      "image": "https://lmsin.net/cdn-cgi/image/h=831,w=615,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000011196949-Blue-Navy-1000011196949_01-2100.jpg"
+    },
+    {
+      "id": 4,
+      "name": "The 400 Blows",
+      "price": 18.40,
+      "size": ["S", "L", "XL"],
+      "image": "https://lmsin.net/cdn-cgi/image/h=831,w=615,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000011196949-Blue-Navy-1000011196949_01-2100.jpg"
+    }
+  ]
+  

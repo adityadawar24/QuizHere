@@ -283,7 +283,7 @@ const NavBar = () => {
             )}
           </div>
           
-          <div style={{ position: "absolute", left: "35%", top: "39%", color: "#aaa" }}>
+          <div style={{ position: "absolute", left: "31%", top: "39%", color: "#aaa" }}>
             <FiSearch />
           </div>
           <input
