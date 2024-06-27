@@ -3,10 +3,15 @@ import { FiSearch, FiHeart, FiShoppingBag } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 
-const NavBar = () => {
+const NavBar = ({ isLoggedIn, setIsLoggedIn }) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [showDropdown1, setShowDropdown1] = useState(false);
   const [showDropdown2, setShowDropdown2] = useState(false);
+  const [showUserDropdown, setShowUserDropdown] = useState(false);
+
+  const handleSignOut = () => {
+    setIsLoggedIn(false);
+  };
   return(
     <div style={{ borderBottom: "1px solid #eaeaea" }}>
       <div style={{ display: "flex", height: "70px", alignItems: "center", padding: "0 116px", position: "relative" }}>
@@ -300,10 +305,25 @@ const NavBar = () => {
               marginTop:"-7px",
             }}
           />
-         
-          <Link to="/signup" className="text-black hover:text-orange-500 " style={{ cursor: "pointer", fontSize:"86%" }}>Sign Up / Sign In</Link>
           <FiHeart style={{ cursor: "pointer" }} />
           <FiShoppingBag style={{ cursor: "pointer" }} />
+          {isLoggedIn ? (
+            <div className="relative" onMouseEnter={() => setShowUserDropdown(true)} onMouseLeave={() => setShowUserDropdown(false)}>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCwYysN_gE_zCdXuLoi7KpfcX5Si9pS9Tbvv9HGNw8DMJ5BYHa3OXLgP_udsPGGhUGOPo&usqp=CAU" alt="Avatar" style={{ margin:"-12px -1px", width: "40px", borderRadius: "60%", cursor: "pointer" }} />
+              {showUserDropdown && (
+                <div className="absolute top-[2.45rem] right-0 bg-white shadow-lg p-4 z-50">
+                  <ul>
+                    <li><Link to="/profile">Profile</Link></li>
+                    <li><Link to="/order-history">Order History</Link></li>
+                    <li><Link to="/addresses">My Addresses</Link></li>
+                    <li><button onClick={handleSignOut}>Sign Out</button></li>
+                  </ul>
+                </div>
+              )}
+            </div>
+          ) : (
+            <Link to="/signup" className="text-black hover:text-orange-500" style={{ cursor: "pointer", fontSize: "86%" }}>Sign Up / Sign In</Link>
+          )}
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ import "./Signup.css";
 import { db } from "../../FirebaseConfig";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
-export const Signup = () => {
+export const Signup = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,7 +14,8 @@ export const Signup = () => {
 
     createUserWithEmailAndPassword(db, email, password).then((data) => {
       console.log(data, "authData");
-      navigate("/dashboard");
+      setIsLoggedIn(true);
+      navigate("/");
     });
     e.target.reset();
   };
