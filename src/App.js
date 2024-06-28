@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "./components/NavBar";
 import { Route, Routes } from "react-router-dom";
 import Women from "./pages/Women";
@@ -7,9 +7,22 @@ import Men from "./pages/Men";
 import Kids from "./pages/Kids";
 import { Signup } from "./pages/Signup/Signup";
 import { Login } from "./pages/Login/Login";
+import { auth } from "./FirebaseConfig"; // import your Firebase auth configuration
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setIsLoggedIn(true);
+      } else {
+        setIsLoggedIn(false);
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   return (
     <>

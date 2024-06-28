@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FiSearch, FiHeart, FiShoppingBag } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import { auth } from "../FirebaseConfig";
 
 
 const NavBar = ({ isLoggedIn, setIsLoggedIn }) => {
@@ -10,7 +11,9 @@ const NavBar = ({ isLoggedIn, setIsLoggedIn }) => {
   const [showUserDropdown, setShowUserDropdown] = useState(false);
 
   const handleSignOut = () => {
-    setIsLoggedIn(false);
+    auth.signOut().then(() => {
+      setIsLoggedIn(false);
+    });
   };
   return(
     <div style={{ borderBottom: "1px solid #eaeaea" }}>
